@@ -18,7 +18,6 @@ export default function TodoForm({onSubmit}) {
 }
 const styles = StyleSheet.create({
     container: {
-        flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'stretch',
         margin:10

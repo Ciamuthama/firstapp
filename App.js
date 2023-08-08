@@ -3,6 +3,7 @@ import { StyleSheet, View, FlatList, Text, TouchableOpacity, Alert, TouchableWit
 import Header from './components/header';
 import TodoItem from './components/TodoItem';
 import TodoForm from './components/TodoForm';
+import Sandbox from './components/Sandbox';
 
 export default function App() {
 
@@ -30,8 +31,11 @@ export default function App() {
 
 
   return (
+     // <Sandbox />
+
     <TouchableWithoutFeedback onPress={() => {
       Keyboard.dismiss()
+
     }}>
 
     <View style={styles.container}>
@@ -62,15 +66,20 @@ const styles = StyleSheet.create({
     // alignItems: 'center',
     // justifyContent: 'center',
   },
-  
+  content: {
+    flex: 1,
+    padding: 40,
+  },
+
   list: {
-    padding: 20,
+    flex:1,
+    padding: 10,
     fontSize: 24,
     margin: 20,
-    borderWidth: .8,
-    borderColor: '#ccc ',
-    borderRadius: 10,
-    width: "96%",
+    //borderWidth: .8,
+    //borderColor: '#ccc ',
+    //borderRadius: 10,
+    width: "100%",
     alignSelf: "center",
     
   }

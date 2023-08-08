@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
         backgroundColor: 'pink',
         padding: 10,
         margin: 5,
-        borderRadius: 8,
+        borderRadius: 10,
+        borderStyle: "dotted",
+        borderColor: 'pink',
+        borderWidth:2.5,
     }
 })
