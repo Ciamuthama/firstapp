@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { StyleSheet, View, FlatList, Text, TouchableOpacity } from 'react-native';
 import Header from './components/header';
+import TodoItem from './components/TodoItem';
 
 export default function App() {
 
@@ -11,7 +12,11 @@ export default function App() {
     {text:'code extra more', key: '4'},
 ])
 
-
+  const onPress = (key) => {
+    setTodo(prevTodo => {
+     return  prevTodo.filter(todo => todo.key != key)
+    })
+}
 
   return (
     <View style={styles.container}>
@@ -23,7 +28,7 @@ export default function App() {
           <FlatList
             data={todo}
             renderItem={({ item }) => (
-              <Text>{item.text}</Text>
+              <TodoItem item={item} onPress={onPress} />
             )}
           />
         </View>
