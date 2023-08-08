@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
   header: {
     backgroundColor: 'pink',
     padding: 20,
