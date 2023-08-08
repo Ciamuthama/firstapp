@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import { StyleSheet, View, FlatList, Text, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, FlatList, Text, TouchableOpacity, Alert } from 'react-native';
 import Header from './components/header';
 import TodoItem from './components/TodoItem';
+import TodoForm from './components/TodoForm';
 
 export default function App() {
 
@@ -16,7 +17,17 @@ export default function App() {
     setTodo(prevTodo => {
      return  prevTodo.filter(todo => todo.key != key)
     })
-}
+  }
+
+  const onSubmit = (text) => {
+    if (text.length > 3) {
+      console.log(text)
+      setTodo((prevTodo) => [...prevTodo, { text: text, key: Math.random().toString() }]);
+    } else {
+      Alert.alert('Oops!!','The message is short 😢')
+    }
+  }
+
 
   return (
     <View style={styles.container}>
@@ -24,11 +35,12 @@ export default function App() {
      <Header />
       <View style={styles.content}>
         {/* to form*/}
+        <TodoForm onSubmit={ onSubmit}/>
         <View style={styles.list}>
           <FlatList
             data={todo}
             renderItem={({ item }) => (
-              <TodoItem item={item} onPress={onPress} />
+              <TodoItem item={item} onPress={onPress}  />
             )}
           />
         </View>
