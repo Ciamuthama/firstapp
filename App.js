@@ -1,11 +1,7 @@
 import React,{useState} from 'react'
 import * as Font from 'expo-font'
 import { StyleSheet, Text, View } from 'react-native';
-
 import Home from './screens/home';
-
-
-
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
