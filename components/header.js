@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 38,
         fontWeight: 'bold',
-        textAlign: 'center'
-
+        textAlign: 'center',
+        fontFamily:'NunitoRegular'
         
     }
 })

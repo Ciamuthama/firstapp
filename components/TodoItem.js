@@ -25,5 +25,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent:'space-between',
         borderWidth:2.5,
+        fontFamily: 'NunitoBold',
     }
 })
