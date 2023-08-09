@@ -20,9 +20,8 @@ const styles = StyleSheet.create({
     header: {
         color: 'white',
         fontSize: 38,
-        fontWeight: 'bold',
         textAlign: 'center',
-        fontFamily:'NunitoRegular'
+        fontFamily:"NunitoBold"
         
     }
 })

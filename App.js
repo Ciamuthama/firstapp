@@ -8,18 +8,18 @@ import Sandbox from './components/Sandbox';
 
 export default function App() {
   const [todo, setTodo] = useState([
-    { text: 'buy me coffee', key: '1' },
+    { text: 'Buy me coffee', key: '1' },
     {text:'Code more', key: '2'},
-    { text: 'break', key:'3' },
-    {text:'code extra more', key: '4'},
+    { text: 'Break', key:'3' },
+    {text:'Code extra more', key: '4'},
   ])
 
   const [fontLoad, setFontLoad] = useState(false)
 
     const getFonts = async () => {
       await Font.loadAsync({
-        NunitoBold : require('./assets/fonts/Nunito-Bold.ttf'),
-        NunitoRegular:require ('./assets/fonts/Nunito-Regular.ttf')
+      "NunitoBold": require('./assets/fonts/Nunito-Bold.ttf'),
+        "NunitoRegular":require ('./assets/fonts/Nunito-Regular.ttf')
       })
       setFontLoad(true);
   }
@@ -74,6 +74,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     paddingTop: 40,
+    fontFamily: "NunitoBold",
     // alignItems: 'center',
     // justifyContent: 'center',
   },
@@ -87,12 +88,11 @@ const styles = StyleSheet.create({
     padding: 10,
     fontSize: 24,
     margin: 20,
-    fontFamily: 'NunitoBold',
     //borderWidth: .8,
     //borderColor: '#ccc ',
     //borderRadius: 10,
     width: "100%",
     alignSelf: "center",
-    
+    fontFamily:"NunitoRegular"
   }
 });

@@ -12,7 +12,7 @@ export default function TodoForm({onSubmit}) {
                 value={text}
                 onChangeText={(value) => setText(value)}
             />
-            <Button onPress={()=> onSubmit(text)} title='add todo' color="coral"/>
+            <Button  onPress={()=> onSubmit(text)} title='add todo' color="coral"/>
         </View>
     )
 }
@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
     container: {
         justifyContent: 'center',
         alignItems: 'stretch',
-        margin:10
+        margin: 10,
+        fontFamily:'NunitoBold'
     },
 
     input: {
@@ -29,6 +30,7 @@ const styles = StyleSheet.create({
         color: 'black',
         borderBottomWidth: 0.7,
         borderBottomColor: 'black',
-        marginBottom:10
+        marginBottom: 10,
+        fontFamily:'NunitoBold'
     }
 })
