@@ -1,18 +1,11 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native';
+import {  Text, View } from 'react-native';
+import { globalStyles } from '../styles/globalstyles';
 
 export default function About() {
     return (
-        <View style={styles.container}>
+        <View style={globalStyles.container}>
             <Text>About Screen</Text>
         </View>
     )
 }
-const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        justifyContent: 'space-around',
-        paddingTop: 20,
-        
-    }
-})
