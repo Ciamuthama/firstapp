@@ -4,9 +4,10 @@ import { StyleSheet } from "react-native"
 export const globalStyles = StyleSheet.create({
     container: {
         flex:1,
-        alignItems: 'center',
-        //justifyContent: 'space-around',
+        //alignItems: 'center',
         paddingTop: 20,
+        backgroundColor: '#fff',
+       
     },
     title: {
         fontFamily: 'nunito-bold',
@@ -14,6 +15,7 @@ export const globalStyles = StyleSheet.create({
     },
     paragraph: {
         marginVertical: 8,
-        FONTsIZE:18,
+        fontSize: 18,
+        marginLeft: 20,
     }
 })

@@ -10,7 +10,7 @@ export default function Navigator() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Welcome" component={Home} />
-        <Stack.Screen name="Review" component={Review} />
+        <Stack.Screen name="Review" component={Review} initialParams={'item'}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
