@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 import * as Font from 'expo-font'
-import { StyleSheet, Text, View } from 'react-native';
-import Home from './screens/home';
+import {  Text, View } from 'react-native';
+import { globalStyles } from './styles/globalstyles';
+import  Navigation  from './routes/homeStack';
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
@@ -17,21 +18,9 @@ export default function App() {
   
   if (loaded) { 
     return (
-      <View style={styles.container}>
-        <Home />
-      </View>
+        <Navigation />
     )
   } else {
     getFonts();
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-});
