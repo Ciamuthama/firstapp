@@ -8,9 +8,22 @@ const Stack = createNativeStackNavigator();
 export default function Navigator() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Welcome" component={Home} />
-        <Stack.Screen name="Review" component={Review} initialParams={'item'}/>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: "#f4511e",
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontFamily: "nunito-bold",
+          },
+        }}
+      >
+        <Stack.Screen name="Welcome" component={Home}/>
+        <Stack.Screen
+          name="Review"
+          component={Review}
+          />
       </Stack.Navigator>
     </NavigationContainer>
   );

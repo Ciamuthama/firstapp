@@ -11,11 +11,13 @@ export const globalStyles = StyleSheet.create({
     },
     title: {
         fontFamily: 'nunito-bold',
-        fontSize:24,
+        fontSize: 24,
+        marginLeft: 20,
     },
     paragraph: {
         marginVertical: 8,
         fontSize: 18,
         marginLeft: 20,
+        fontFamily: 'nunito-regular',
     }
 })

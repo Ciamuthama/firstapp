@@ -7,8 +7,8 @@ export default function Review({ route }) {
 
     return (
         <View style={globalStyles.container}>
-            <Text style={globalStyles.paragraph}>Title:{title}</Text>
-            <Text style={globalStyles.paragraph}>Rating:{rating}</Text>
+            <Text style={globalStyles.paragraph}>Title: {title}</Text>
+            <Text style={globalStyles.paragraph}>Rating: {rating}</Text>
             <Text style={globalStyles.paragraph}>Description: {body}</Text>
         </View>
     )
