@@ -6,10 +6,11 @@ import { NavigationContainer, DefaultTheme,
 import Home from "./homeStack";
 import AboutStack from "../routes/aboutstack";
 
+
 const Drawer = createDrawerNavigator();
 
 
-export default function Drawers() {
+export default function Drawers({title}) {
     const MyTheme = {
         dark: false,
         
@@ -22,7 +23,8 @@ export default function Drawers() {
 
   return (
       <NavigationContainer theme={MyTheme}>
-          <Drawer.Navigator initialRouteName='Home' screenOptions={{
+      <Drawer.Navigator initialRouteName='Home' screenOptions={{
+              headerShown:false,
               headerStyle: {
                   backgroundColor: "#f4511e",
               },
@@ -31,8 +33,8 @@ export default function Drawers() {
                   fontFamily: "nunito-bold",
               }
           }} >
-        <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="About" component={AboutStack}/>
+        <Drawer.Screen name="Home" option={{headerShown: false}} component={Home} />
+        <Drawer.Screen name="About" option={{headerShown: false}} component={AboutStack}/>
       </Drawer.Navigator>
     </NavigationContainer>
   );

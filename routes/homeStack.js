@@ -2,10 +2,11 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 //import { NavigationContainer } from "@react-navigation/native";
 import Home from "../screens/home";
 import Review from "../screens/ReviewDetails";
+import Header from './header';
 
 const Stack = createNativeStackNavigator();
 
-export default function Navigator() {
+export default function Navigator({navigation}) {
   return (
     
       <Stack.Navigator
@@ -21,16 +22,15 @@ export default function Navigator() {
           },
         }}
       >
-        <Stack.Screen name="Welcome" component={Home} options={{
-            headerShown: false,
-          }}/>
+        <Stack.Screen name="Welcome"  component={Home} options={() => ({
+          headerLeft: () => <Header navigation={ navigation} />,
+          title: 'Home',
+          })}/>
         <Stack.Screen
-          name="Review"
+        name="Review"
         component={Review}
         options={{
-          headerShown: false,
-          
-          
+          title:'Review'
         }}
           />
       </Stack.Navigator>

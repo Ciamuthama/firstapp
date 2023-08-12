@@ -1,23 +1,30 @@
-import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import About from "../screens/about";
+import Header from './header';
 
 
 const Stack = createNativeStackNavigator();
 
-export default function AboutStack() {
+export default function AboutStack({navigation}) {
+
+
     return (
-            <Stack.Navigator screenOptions={{
-                headerStyle: {
-                    backgroundColor: "#f4511e",
-                    
+        <Stack.Navigator screenOptions={{
+          headerStyle: {
+            backgroundColor: "#f4511e",
+            
                 },
-                headerTintColor: "#fff",
-                headerTitleStyle: {
-                  fontFamily: "nunito-bold",
-                },
+        headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontFamily: "nunito-bold",
+            
+                  },
               }}>
-                <Stack.Screen name="About" component={About}/>
-            </Stack.Navigator>
+          <Stack.Screen name="About" component={About} options={() => ({
+          headerLeft: () => <Header navigation={ navigation} />,
+          title: 'About',
+          
+          })}/>
+        </Stack.Navigator>
   );
 }
