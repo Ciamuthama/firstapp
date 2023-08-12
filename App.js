@@ -1,8 +1,6 @@
 import React,{useState} from 'react'
 import * as Font from 'expo-font'
-import {  Text, View } from 'react-native';
-import { globalStyles } from './styles/globalstyles';
-import  Navigation  from './routes/homeStack';
+import Drawers from './routes/drawer';
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
@@ -18,7 +16,8 @@ export default function App() {
   
   if (loaded) { 
     return (
-        <Navigation />
+        
+        <Drawers/>
     )
   } else {
     getFonts();

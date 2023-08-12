@@ -3,6 +3,7 @@ import { Text, View,FlatList, TouchableOpacity } from 'react-native';
 import { globalStyles } from '../styles/globalstyles';
 
 
+
 export default function Home({ navigation }) {
     const [review, setReview] = useState([
         { title: 'Fast and Furious 10', rating: 4.5, body: 'Come out in 2023', key: '1' },
@@ -12,12 +13,15 @@ export default function Home({ navigation }) {
     ])
 
     return (
-        <View style={globalStyles.container}>
+        <View styles={globalStyles.container}>
             <FlatList data={review} renderItem={({ item }) => (
-                <TouchableOpacity onPress={()=> navigation.navigate("Review", item)}>
+                <TouchableOpacity onPress={() => navigation.navigate("Review", item)}>
+                    <View style={globalStyles.wrapper}>
                     <Text style={globalStyles.title}>{item.title}</Text>
+                    </View>
                 </TouchableOpacity>
-           )}/>
+            )} />
+            
         </View>
     )
 }
