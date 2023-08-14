@@ -1,8 +1,5 @@
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer, DefaultTheme,
-    DarkTheme,
-} from '@react-navigation/native';
-    import { useColorScheme } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import Home from "./homeStack";
 import AboutStack from "../routes/aboutstack";
 
@@ -10,15 +7,16 @@ import AboutStack from "../routes/aboutstack";
 const Drawer = createDrawerNavigator();
 
 
-export default function Drawers({title}) {
+export default function Drawers() {
     const MyTheme = {
-        dark: false,
-        
-        colors: {
+      dark: false,
+      
+      colors: {
           primary: '#f4511e',
           card: '#fff',
           text: '#000',
-        },
+      },
+      
       };
 
   return (
