@@ -7,8 +7,6 @@ export const globalStyles = StyleSheet.create({
         //alignItems: 'center',
         paddingTop: 30,
         backgroundColor: '#fff',
-        marginLeft: 20,
-        
     },
     title: {
         fontFamily: 'nunito-bold',
