@@ -5,16 +5,16 @@ import Card from '../shared/cards';
 
 
 export default function Review({ route }) {
-    const { title,rating, body } = route.params
+    const { title,Rating, Body } = route.params
       
     return (
         <View style={globalStyles.container}>
             <Card>
             <Text style={globalStyles.paragraph}>Title: {title}</Text>
-            <Text style={globalStyles.paragraph}>Description: {body}</Text>
+            <Text style={globalStyles.paragraph}>Body: {Body}</Text>
                 <View style={styles.ratings}>
                     <Text>Rating</Text>
-                     <Image source={(images.ratings[rating])} />
+                     <Image source={(images.ratings[Rating])} />
             </View>
             </Card>
         </View>

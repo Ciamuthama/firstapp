@@ -3,12 +3,16 @@ import { StyleSheet, Button, TextInput, View } from "react-native";
 import { Formik } from "formik";
 import { globalStyles } from "../styles/globalstyles";
 
-export default function Form() {
+export default function Form({onReview}) {
   return (
     <View style={styles.container}>
       <Formik
-        initialValues={{ title: "", Body: "", rating: "" }}
-        onSubmit={(values) => console.log(values)}
+        initialValues={{ title: "", Body: "", Rating: "" }}
+              onSubmit={(values, actions) =>{
+                actions.resetForm()  
+                 onReview(values)
+              }
+              }
       >
         {({ handleChange, handleBlur, handleSubmit, values }) => (
           <View>
@@ -29,10 +33,12 @@ export default function Form() {
             />
             <TextInput
               style={globalStyles.input}
-              placeholder="Review Review"
-              onChangeText={handleChange("Review")}
-              onBlur={handleBlur("Review")}
-              value={values.Review}
+              placeholder="Rating (1-5)"
+              keyboardType="number-pad"
+              maxLength={1}
+              onChangeText={handleChange("Rating")}
+              onBlur={handleBlur("Rating")}
+              value={values.Rating}
             />
             <Button onPress={handleSubmit} title="Submit" />
           </View>
@@ -45,7 +51,7 @@ export default function Form() {
 const styles = StyleSheet.create({
   container: {
     width: 400,
-    height: 900,
+    height: 600,
     marginBottom: 10,
     marginTop: 30,
     justifyContent: "center",
