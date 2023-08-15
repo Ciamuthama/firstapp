@@ -30,7 +30,9 @@ export const globalStyles = StyleSheet.create({
         borderRadius: 6,
         width: '100%',
         marginBottom: 20,
-    }
+        marginTop: 10,
+    },
+    
     
 })
 

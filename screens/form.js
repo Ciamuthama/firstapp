@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Button, TextInput, View } from "react-native";
+import { StyleSheet, Button, TextInput, View, Text } from "react-native";
 import { Formik } from "formik";
 import * as Yup from "yup";
 import { globalStyles } from "../styles/globalstyles";
@@ -25,7 +25,14 @@ export default function Form({ onReview }) {
           onReview(values);
         }}
       >
-        {({ handleChange, handleBlur, handleSubmit, values }) => (
+        {({
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          values,
+          errors,
+          touched,
+        }) => (
           <View>
             <TextInput
               style={globalStyles.input}
@@ -34,6 +41,9 @@ export default function Form({ onReview }) {
               onBlur={handleBlur("title")}
               value={values.title}
             />
+            {touched.title && errors.title && (
+            <Text style={styles.errors}>{errors.title}</Text>
+            )}
             <TextInput
               style={globalStyles.input}
               multiline
@@ -42,6 +52,9 @@ export default function Form({ onReview }) {
               onBlur={handleBlur("Body")}
               value={values.Body}
             />
+            {touched.Body && errors.Body && (
+            <Text style={styles.errors}>{errors.Body}</Text>
+            )}
             <TextInput
               style={globalStyles.input}
               placeholder="Rating (1-5)"
@@ -51,6 +64,9 @@ export default function Form({ onReview }) {
               onBlur={handleBlur("Rating")}
               value={values.Rating}
             />
+            {touched.Rating && errors.Rating && (
+            <Text style={styles.errors}>{errors.Rating}</Text>
+            )}
             <Button onPress={handleSubmit} title="Submit" />
           </View>
         )}
@@ -62,10 +78,17 @@ export default function Form({ onReview }) {
 const styles = StyleSheet.create({
   container: {
     width: 400,
-    height: 600,
-    marginBottom: 10,
+    height: 800,
     marginTop: 30,
-    justifyContent: "center",
-    alignItem: "center",
+    //justifyContent: "center",
+    //alignItem: "center",
+  },
+
+  errors: {
+    color: "crimson",
+    fontWeight: "bold",
+    marginBottom: 10,
+    marginTop: -6,
+    textAlign: "center",
   },
 });
