@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {StyleSheet, Text, View,FlatList, TouchableOpacity,ImageBackground, Modal } from 'react-native';
+import {StyleSheet, Text, View,FlatList, TouchableOpacity,ImageBackground, Modal, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { globalStyles } from '../styles/globalstyles';
 import {MaterialIcons} from '@expo/vector-icons'
 import Card from '../shared/cards';
@@ -27,16 +27,19 @@ export default function Home({ navigation }) {
         <ImageBackground source={require('../assets/game_bg.png')} styles={globalStyles.container}>
 
             <Modal visible={open} animationType='fade'>
+                <TouchableWithoutFeedback onPress={Keyboard.dismiss  }>
+
                 <View style={styles.modal}>
-                    <Text><Form onReview={ onReview} /></Text>
-                </View>
                 <MaterialIcons
                 name='close'
                 size={24}
                 color='#000'
                 style={styles.ModalToggle}
                 onPress={()=> setOpen(false)}
-            />
+                />
+                <Text><Form onReview={ onReview} /></Text>
+                </View>
+                </TouchableWithoutFeedback>
             </Modal>
 
             <MaterialIcons
