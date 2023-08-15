@@ -5,7 +5,7 @@ import { globalStyles } from '../styles/globalstyles';
 export default function About() {
     return (
         <View style={globalStyles.container}>
-            <Text>About Screen</Text>
+            <Text style={globalStyles.paragraph}>About Screen</Text>
         </View>
     )
 }
