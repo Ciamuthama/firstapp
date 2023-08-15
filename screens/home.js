@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Text, View,FlatList, TouchableOpacity } from 'react-native';
+import { Text, View,FlatList, TouchableOpacity,ImageBackground } from 'react-native';
 import { globalStyles } from '../styles/globalstyles';
 import Card from '../shared/cards';
 
@@ -14,7 +14,7 @@ export default function Home({ navigation }) {
     ])
 
     return (
-        <View styles={globalStyles.container}>
+        <ImageBackground source={require('../assets/game_bg.png')} styles={globalStyles.container}>
             <FlatList data={review} renderItem={({ item }) => (
                 <TouchableOpacity onPress={() => navigation.navigate("Review", item)}>
                     <View style={globalStyles.wrapper}>
@@ -25,6 +25,6 @@ export default function Home({ navigation }) {
                 </TouchableOpacity>
             )} />
             
-        </View>
+        </ImageBackground>
     )
 }

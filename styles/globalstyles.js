@@ -4,8 +4,7 @@ import { StyleSheet } from "react-native"
 
 export const globalStyles = StyleSheet.create({
     container: {
-        flex:1,
-        //alignItems: 'center',
+        alignItems: 'center',
         paddingTop: 30,
         backgroundColor: '#fff',
     },
@@ -22,7 +21,8 @@ export const globalStyles = StyleSheet.create({
         fontSize: 18,
         marginLeft: 20,
         fontFamily: 'nunito-regular',
-    }
+    },
+    
 })
 
 export const images = {

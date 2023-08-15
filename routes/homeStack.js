@@ -11,11 +11,10 @@ export default function Navigator({ navigation }) {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#f4511e",
-          marginBottom: 30,
+          backgroundColor: "#e26f4b",
         },
 
-        headerTintColor: "#fff",
+        headerTintColor: "#000",
         headerTitleStyle: {
           fontFamily: "nunito-bold",
         },

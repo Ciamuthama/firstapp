@@ -12,7 +12,7 @@ export default function Drawers() {
       dark: false,
       
       colors: {
-          primary: '#f4511e',
+          primary: '#e26f4b',
           card: '#fff',
           text: '#000',
       },
@@ -24,7 +24,7 @@ export default function Drawers() {
       <Drawer.Navigator initialRouteName='Home' screenOptions={{
               headerShown:false,
               headerStyle: {
-                  backgroundColor: "#f4511e",
+                  backgroundColor: "#e26f4b",
               },
               headerTintColor: "#fff",
               headerTitleStyle: {

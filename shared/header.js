@@ -1,12 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
 import { Feather } from '@expo/vector-icons';
+
 
 export default function Header({navigation, title }) {
 
     return (
-        <View style={styles.container}>
-            <Feather name="menu" size={28} onPress={()=> navigation.openDrawer()} color="white"  />
+        <View source={require('../assets/game_bg.png')} style={styles.container}>
+            <Feather  name="menu" size={28} onPress={() => navigation.openDrawer()} color="white" />
             <Image style={styles.image} source={require('../assets/heart_logo.png')}/>
             <Text style={styles.text}>{title}</Text>
         </View>
@@ -17,24 +18,32 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         justifyContent: 'center',
-        height:'100%',
-        width:'auto'
+        alignItems:'center',
+        height:60,
+        
+    },
+   
+    headerTitle: {
+        alignItems: "center",
+        justifyContent: 'center',
+        flexDirection: 'row',
+        
     },
    
     text: {
-        color: 'black',
         fontSize: 25,
         letterSpacing: 1,
-        marginLeft: 3,
-        textAlign:'center'
+        marginLeft: 10,
     },
+    
     image: {
-        resizeMode: "contain",
         width: 30,
         height: 30,
         marginLeft: 135,
-        justifyContent:'center'
-        
-    }
+        //marginTop:30,
+        justifyContent: 'center',
+        alignItems:'center',
+    },
+    
 
 })

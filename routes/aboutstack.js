@@ -9,7 +9,7 @@ export default function AboutStack({ navigation }) {
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#f4511e",
+          backgroundColor: "#e26f4b",
         },
         headerTintColor: "#fff",
         headerTitleStyle: {

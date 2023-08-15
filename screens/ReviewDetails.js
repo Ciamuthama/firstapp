@@ -7,8 +7,6 @@ import Card from '../shared/cards';
 export default function Review({ route }) {
     const { title,rating, body } = route.params
       
-  
-
     return (
         <View style={globalStyles.container}>
             <Card>
