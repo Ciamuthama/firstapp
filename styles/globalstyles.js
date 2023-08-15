@@ -22,6 +22,15 @@ export const globalStyles = StyleSheet.create({
         marginLeft: 20,
         fontFamily: 'nunito-regular',
     },
+    input:{
+        borderWidth: 1,
+        borderColor: '#ddd',
+        padding: 10,
+        fontSize: 18,
+        borderRadius: 6,
+        width: '100%',
+        marginBottom: 20,
+    }
     
 })
 

@@ -3,6 +3,7 @@ import {StyleSheet, Text, View,FlatList, TouchableOpacity,ImageBackground, Modal
 import { globalStyles } from '../styles/globalstyles';
 import {MaterialIcons} from '@expo/vector-icons'
 import Card from '../shared/cards';
+import Form from './form';
 
 
 
@@ -21,7 +22,7 @@ export default function Home({ navigation }) {
 
             <Modal visible={open} animationType='fade'>
                 <View style={styles.modal}>
-                    <Text>Hello</Text>
+                    <Text><Form /></Text>
                 </View>
                 <MaterialIcons
                 name='close'
